@@ -29,8 +29,6 @@ export enum Value {
   LOW = 0
 }
 
-// TODO: convert modules to be one class per module...?
-
 // raspi
 
 export interface IBase {
