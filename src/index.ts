@@ -31,7 +31,7 @@ export enum Value {
 
 // raspi
 
-export interface IBase {
+export interface IBaseModule {
   init(cb: (err?: Error) => void): void;
 }
 
@@ -43,7 +43,7 @@ export interface IPinInfo {
   gpio: number;
 }
 
-export interface IBoard {
+export interface IBoardModule {
   getPins(): {
     [pin: number]: IPinInfo;
   };

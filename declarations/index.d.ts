@@ -4,7 +4,7 @@ export declare enum Value {
     HIGH = 1,
     LOW = 0
 }
-export interface IBase {
+export interface IBaseModule {
     init(cb: (err?: Error) => void): void;
 }
 export interface IPinInfo {
@@ -12,7 +12,7 @@ export interface IPinInfo {
     peripherals: string[];
     gpio: number;
 }
-export interface IBoard {
+export interface IBoardModule {
     getPins(): {
         [pin: number]: IPinInfo;
     };
