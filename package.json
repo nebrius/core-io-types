@@ -1,6 +1,6 @@
 {
   "name": "core-io-types",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "TypeScript type information for dependency modules consumed by core-io ",
   "main": "dist/index.js",
   "types": "declarations/index.d.ts",

@@ -125,6 +125,9 @@ export interface IPWMConfig {
   range?: number;
 }
 export interface IPWM extends IPeripheral {
+  readonly frequency: number;
+  readonly range: number;
+  readonly dutyCycle: number;
   write(dutyCycle: number): void;
 }
 export interface IPWMModule {
