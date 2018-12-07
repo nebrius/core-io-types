@@ -1,3 +1,7 @@
+## 1.2.0 (2018-12-7)
+
+- Updated the `createPWM` method to take a number and string as well as config object
+
 ## 1.1.0 (2018-12-6)
 
 - Added `frequency`, `range`, and `dutyCycle` readonly properties to IPWM

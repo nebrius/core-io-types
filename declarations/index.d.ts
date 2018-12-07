@@ -83,7 +83,7 @@ export interface IPWM extends IPeripheral {
     write(dutyCycle: number): void;
 }
 export interface IPWMModule {
-    createPWM: (config: IPWMConfig) => IPWM;
+    createPWM: (config: number | string | IPWMConfig) => IPWM;
 }
 export interface ISerialOptions {
     portId?: string;
