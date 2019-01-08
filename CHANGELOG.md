@@ -1,3 +1,7 @@
+## 1.3.0 (2019-01-07)
+
+- Added the `pullResistor` readonly property to `IDigitalInput`
+
 ## 1.2.0 (2018-12-7)
 
 - Updated the `createPWM` method to take a number and string as well as config object

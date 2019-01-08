@@ -35,6 +35,7 @@ export interface IDigitalOutput extends IPeripheral {
 }
 export interface IDigitalInput extends IPeripheral {
     readonly value: Value;
+    readonly pullResistor: number;
     read(): number;
 }
 export interface IGPIOModule {
