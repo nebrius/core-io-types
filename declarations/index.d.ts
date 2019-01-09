@@ -4,8 +4,19 @@ export declare enum Value {
     HIGH = 1,
     LOW = 0
 }
+export interface IPeripheral extends EventEmitter {
+    readonly alive: boolean;
+    readonly pins: number[];
+    destroy(): void;
+    validateAlive(): void;
+}
 export interface IBaseModule {
     init(cb: (err?: Error) => void): void;
+    getActivePeripherals(): {
+        [pin: number]: IPeripheral;
+    };
+    getActivePeripheral(pin: number): IPeripheral | undefined;
+    setActivePeripheral(pin: number, peripheral: IPeripheral): void;
 }
 export interface IPinInfo {
     pins: string[];
@@ -18,12 +29,6 @@ export interface IBoardModule {
     };
     getPinNumber(alias: string | number): number | null;
     getGpioNumber(alias: string | number): number | null;
-}
-export interface IPeripheral extends EventEmitter {
-    readonly alive: boolean;
-    readonly pins: number[];
-    destroy(): void;
-    validateAlive(): void;
 }
 export interface IGPIOConfig {
     pin: number | string;

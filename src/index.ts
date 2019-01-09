@@ -29,10 +29,22 @@ export enum Value {
   LOW = 0
 }
 
+// raspi-peripheral
+
+export interface IPeripheral extends EventEmitter {
+  readonly alive: boolean;
+  readonly pins: number[];
+  destroy(): void;
+  validateAlive(): void;
+}
+
 // raspi
 
 export interface IBaseModule {
   init(cb: (err?: Error) => void): void;
+  getActivePeripherals(): { [ pin: number ]: IPeripheral };
+  getActivePeripheral(pin: number): IPeripheral | undefined;
+  setActivePeripheral(pin: number, peripheral: IPeripheral): void;
 }
 
 // raspi-board
@@ -49,15 +61,6 @@ export interface IBoardModule {
   };
   getPinNumber(alias: string | number): number | null;
   getGpioNumber(alias: string | number): number | null;
-}
-
-// raspi-peripheral
-
-export interface IPeripheral extends EventEmitter {
-  readonly alive: boolean;
-  readonly pins: number[];
-  destroy(): void;
-  validateAlive(): void;
 }
 
 // raspi-gpio, split into two

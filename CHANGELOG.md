@@ -1,3 +1,7 @@
+## 1.4.0 (2019-01-08)
+
+- Added `getActivePeripheral`, `setActivePeripheral`, and `getActivePeripherals` methods to the base module. This functionality existed in raspi-peripheral already, but wasn't exposed.
+
 ## 1.3.0 (2019-01-07)
 
 - Added the `pullResistor` readonly property to `IDigitalInput`
