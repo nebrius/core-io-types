@@ -1,8 +1,13 @@
-## 1.4.0 (2019-01-08)
+## 2.0.0 (2019-1-9)
+
+- BREAKING CHANGE: Removed the `IBoardModule` and `IPinInfo` interfaces, as honestly they're internal details and don't belong here
+- Added the `getPinNumber` method to the base module
+
+## 1.4.0 (2019-1-8)
 
 - Added `getActivePeripheral`, `setActivePeripheral`, and `getActivePeripherals` methods to the base module. This functionality existed in raspi-peripheral already, but wasn't exposed.
 
-## 1.3.0 (2019-01-07)
+## 1.3.0 (2019-1-7)
 
 - Added the `pullResistor` readonly property to `IDigitalInput`
 

@@ -17,18 +17,7 @@ export interface IBaseModule {
     };
     getActivePeripheral(pin: number): IPeripheral | undefined;
     setActivePeripheral(pin: number, peripheral: IPeripheral): void;
-}
-export interface IPinInfo {
-    pins: string[];
-    peripherals: string[];
-    gpio: number;
-}
-export interface IBoardModule {
-    getPins(): {
-        [pin: number]: IPinInfo;
-    };
     getPinNumber(alias: string | number): number | null;
-    getGpioNumber(alias: string | number): number | null;
 }
 export interface IGPIOConfig {
     pin: number | string;

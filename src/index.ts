@@ -45,22 +45,7 @@ export interface IBaseModule {
   getActivePeripherals(): { [ pin: number ]: IPeripheral };
   getActivePeripheral(pin: number): IPeripheral | undefined;
   setActivePeripheral(pin: number, peripheral: IPeripheral): void;
-}
-
-// raspi-board
-
-export interface IPinInfo {
-  pins: string[];
-  peripherals: string[];
-  gpio: number;
-}
-
-export interface IBoardModule {
-  getPins(): {
-    [pin: number]: IPinInfo;
-  };
   getPinNumber(alias: string | number): number | null;
-  getGpioNumber(alias: string | number): number | null;
 }
 
 // raspi-gpio, split into two
