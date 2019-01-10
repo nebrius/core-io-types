@@ -73,15 +73,16 @@ export interface IGPIOModule {
 
 // raspi-i2c
 
-export type I2CReadCallback = (err: null | Error | string, data: null | Buffer | number) => void;
+export type I2CReadBufferCallback = (err: null | Error | string, data: null | Buffer) => void;
+export type I2CReadNumberCallback = (err: null | Error | string, data: null | number) => void;
 export type I2CWriteCallback = (err: null | Error | string) => void;
 export interface II2C extends IPeripheral {
-  read(address: number, length: number, cb: I2CReadCallback): void;
-  read(address: number, register: number, length: number, cb: I2CReadCallback): void;
-  readByte(address: number, cb: I2CReadCallback): void;
-  readByte(address: number, register: number, cb: I2CReadCallback): void;
-  readWord(address: number, cb: I2CReadCallback): void;
-  readWord(address: number, register: number, cb: I2CReadCallback): void;
+  read(address: number, length: number, cb: I2CReadBufferCallback): void;
+  read(address: number, register: number, length: number, cb: I2CReadBufferCallback): void;
+  readByte(address: number, cb: I2CReadNumberCallback): void;
+  readByte(address: number, register: number, cb: I2CReadNumberCallback): void;
+  readWord(address: number, cb: I2CReadNumberCallback): void;
+  readWord(address: number, register: number, cb: I2CReadNumberCallback): void;
   write(address: number, buffer: Buffer, cb?: I2CWriteCallback): void;
   write(address: number, register: number, buffer: Buffer, cb?: I2CWriteCallback): void;
   writeByte(address: number, byte: number, cb?: I2CWriteCallback): void;

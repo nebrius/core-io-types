@@ -1,3 +1,7 @@
+## 2.0.1 (2019-1-9)
+
+- Fixed a bug where I2C callbacks weren't _quite_ correct (callback data types weren't locked to the appropriate calls)
+
 ## 2.0.0 (2019-1-9)
 
 - BREAKING CHANGE: Removed the `IBoardModule` and `IPinInfo` interfaces, as honestly they're internal details and don't belong here
