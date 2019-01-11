@@ -4,6 +4,17 @@ export declare enum Value {
     HIGH = 1,
     LOW = 0
 }
+export declare enum PeripheralType {
+    GPIO = "gpio",
+    PWM = "pwm",
+    I2C = "i2c",
+    SPI = "spi",
+    UART = "uart"
+}
+export interface IPinInfo {
+    pins: string[];
+    peripherals: PeripheralType[];
+}
 export interface IPeripheral extends EventEmitter {
     readonly alive: boolean;
     readonly pins: number[];

@@ -1,3 +1,7 @@
+## 2.1.0 (2019-1-10)
+
+- Added the `IPinInfo` types that are used by the Core IO constructor
+
 ## 2.0.1 (2019-1-9)
 
 - Fixed a bug where I2C callbacks weren't _quite_ correct (callback data types weren't locked to the appropriate calls)

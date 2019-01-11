@@ -29,6 +29,19 @@ export enum Value {
   LOW = 0
 }
 
+export enum PeripheralType {
+  GPIO = 'gpio',
+  PWM = 'pwm',
+  I2C = 'i2c',
+  SPI = 'spi',
+  UART = 'uart'
+}
+
+export interface IPinInfo {
+  pins: string[];
+  peripherals: PeripheralType[];
+}
+
 // raspi-peripheral
 
 export interface IPeripheral extends EventEmitter {

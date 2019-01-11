@@ -28,4 +28,12 @@ var Value;
     Value[Value["HIGH"] = 1] = "HIGH";
     Value[Value["LOW"] = 0] = "LOW";
 })(Value = exports.Value || (exports.Value = {}));
+var PeripheralType;
+(function (PeripheralType) {
+    PeripheralType["GPIO"] = "gpio";
+    PeripheralType["PWM"] = "pwm";
+    PeripheralType["I2C"] = "i2c";
+    PeripheralType["SPI"] = "spi";
+    PeripheralType["UART"] = "uart";
+})(PeripheralType = exports.PeripheralType || (exports.PeripheralType = {}));
 //# sourceMappingURL=index.js.map
