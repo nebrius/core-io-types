@@ -1,3 +1,7 @@
+## 2.2.0 (2019-206)
+
+- Made the error callback argument for serial methods optional
+
 ## 2.1.0 (2019-1-10)
 
 - Added the `IPinInfo` types that are used by the Core IO constructor

@@ -100,7 +100,7 @@ export interface ISerialOptions {
     parity?: 'none' | 'even' | 'mark' | 'odd' | 'space';
 }
 export declare type SerialCallback = () => void;
-export declare type SerialErrorCallback = (err: Error | string) => void;
+export declare type SerialErrorCallback = (err?: Error | string) => void;
 export interface ISerial extends IPeripheral {
     readonly port: string;
     readonly baudRate: number;

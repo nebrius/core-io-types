@@ -148,7 +148,7 @@ export interface ISerialOptions {
     parity?: 'none' | 'even' | 'mark' | 'odd' | 'space';
 }
 export type SerialCallback = () => void;
-export type SerialErrorCallback = (err: Error | string) => void;
+export type SerialErrorCallback = (err?: Error | string) => void;
 export interface ISerial extends IPeripheral {
     readonly port: string;
     readonly baudRate: number;
