@@ -1,4 +1,8 @@
-## 2.2.0 (2019-206)
+## 2.3.0 (2019-2-7)
+
+- Added port ID option to `createI2C` to differentiate between different I2C ports.
+
+## 2.2.0 (2019-2-6)
 
 - Made the error callback argument for serial methods optional
 

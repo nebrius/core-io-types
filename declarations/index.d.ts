@@ -68,7 +68,7 @@ export interface II2C extends IPeripheral {
     writeWord(address: number, register: number, word: number, cb?: I2CWriteCallback): void;
 }
 export interface II2CModule {
-    createI2C: () => II2C;
+    createI2C: (portId: number | string) => II2C;
 }
 export interface ILED extends IPeripheral {
     hasLed(): boolean;

@@ -105,7 +105,7 @@ export interface II2C extends IPeripheral {
 }
 
 export interface II2CModule {
-  createI2C: () => II2C;
+  createI2C: (portId: number | string) => II2C;
 }
 
 // raspi-led
