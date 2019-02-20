@@ -1,3 +1,7 @@
+## 2.4.0 (2019-2-20)
+
+- Renamed to j5-io-types to avoid a name collision in the npm registry
+
 ## 2.3.0 (2019-2-7)
 
 - Added port ID option to `createI2C` to differentiate between different I2C ports.

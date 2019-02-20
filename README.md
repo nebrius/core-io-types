@@ -1,6 +1,6 @@
-# Core IO Types
+# J5 IO Types
 
-TypeScript type information for dependency modules consumed by core-io
+TypeScript type information for dependency modules consumed by j5-io
 
 # License
 
